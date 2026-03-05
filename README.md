@@ -55,4 +55,4 @@ Still a lot to learn in React.js and no better way to do that by using it on the
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/socratesioa)
+- Frontend Mentor - [@socratesioa](https://www.frontendmentor.io/profile/socratesioa)
