@@ -1,0 +1,145 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+.planet__image-wrapper {
+  grid-area: image;
+  margin-inline: auto;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+  @include respond(medium, min) {
+    margin-bottom: 20px;
+  }
+  @include respond(large, min) {
+    margin-bottom: 0;
+  }
+}
+
+.planet__image-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.planet__image-wrapper .planet__geology-overlay {
+  width: 82px;
+  height: 100px;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  @include respond(medium, min) {
+    width: 123px;
+    height: 150px;
+    bottom: 0;
+  }
+  @include respond(large, min) {
+    bottom: 11px;
+    width: 163px;
+    height: 200px;
+  }
+}
+
+.planet__image-wrapper--mercury {
+  width: 111px;
+  height: 185px;
+  @include respond(medium, min) {
+    width: 184px;
+    height: 294px;
+  }
+  @include respond(large, min) {
+    width: 290px;
+    height: 425px;
+  }
+}
+
+.planet__image-wrapper--venus {
+  width: 154px;
+  height: 206px;
+  @include respond(medium, min) {
+    width: 253px;
+    height: 328px;
+  }
+  @include respond(large, min) {
+    width: 400px;
+    height: 480px;
+  }
+}
+
+.planet__image-wrapper--earth {
+  width: 173px;
+  height: 216px;
+  @include respond(medium, min) {
+    width: 285px;
+    height: 344px;
+  }
+  @include respond(large, min) {
+    width: 450px;
+    height: 505px;
+  }
+}
+
+.planet__image-wrapper--mars {
+  width: 129px;
+  height: 193px;
+  @include respond(medium, min) {
+    width: 213px;
+    height: 308px;
+  }
+  @include respond(large, min) {
+    width: 336px;
+    height: 448px;
+  }
+}
+
+.planet__image-wrapper--jupiter {
+  width: 224px;
+  height: 241px;
+  @include respond(medium, min) {
+    width: 369px;
+    height: 386px;
+  }
+  @include respond(large, min) {
+    width: 582px;
+    height: 582px;
+  }
+}
+
+.planet__image-wrapper--saturn {
+  width: 256px;
+  height: 256px;
+  @include respond(medium, min) {
+    width: 422px;
+    height: 422px;
+  }
+  @include respond(large, min) {
+    width: 666px;
+    height: 666px;
+  }
+}
+
+.planet__image-wrapper--uranus {
+  width: 176px;
+  height: 217px;
+  @include respond(medium, min) {
+    width: 290px;
+    height: 347px;
+  }
+  @include respond(large, min) {
+    width: 458px;
+    height: 509px;
+  }
+}
+
+.planet__image-wrapper--neptune {
+  width: 173px;
+  height: 216px;
+  @include respond(medium, min) {
+    width: 285px;
+    height: 344px;
+  }
+  @include respond(large, min) {
+    width: 450px;
+    height: 505px;
+  }
+}

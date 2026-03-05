@@ -1,0 +1,49 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+.header {
+  position: relative;
+  background-color: $clr-body-bg;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: rgba($clr-body-text-primary, 0.2);
+  left: 0;
+  bottom: 0;
+}
+
+.header__container {
+  padding: 1rem 0.5rem 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include respond(medium, min) {
+    max-width: 688px;
+    width: 100%;
+    margin-inline: auto;
+    padding: 2rem 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+  @include respond(large, min) {
+    max-width: 1440px;
+    padding: 0 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.header__nav {
+  display: none;
+  @include respond(medium, min) {
+    display: block;
+  }
+  @include respond(large, min) {
+    height: 84px;
+  }
+}

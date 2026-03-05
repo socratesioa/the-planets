@@ -1,0 +1,67 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+.planet__page-stats--container {
+  padding: 0 1.5rem;
+  @include respond(medium, min) {
+    padding: 0 2.5rem;
+  }
+  @include respond(large, min) {
+    max-width: 1110px;
+    width: 100%;
+    margin-inline: auto;
+    padding: 0;
+  }
+}
+
+.planet__stats {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  @include respond(medium, min) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  @include respond(large, min) {
+    gap: 30px;
+  }
+}
+
+.planet__stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba($clr-body-text-primary, 0.2);
+  padding: 11px 24px;
+  @include respond(medium, min) {
+    flex-direction: column;
+    gap: 6px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 17.5px 16px;
+  }
+  @include respond(large, min) {
+    gap: 4px;
+    padding: 24px;
+  }
+}
+
+.planet__stat dt {
+  color: rgba($clr-body-text-primary, 0.5);
+  @include text-preset(typo.$text-preset-12);
+  text-transform: uppercase;
+  @include respond(large, min) {
+    @include text-preset(typo.$text-preset-10-bold);
+  }
+}
+
+.planet__stat dd {
+  @include text-preset(typo.$text-preset-6);
+  text-transform: uppercase;
+  @include respond(medium, min) {
+    @include text-preset(typo.$text-preset-5);
+  }
+  @include respond(large, min) {
+    @include text-preset(typo.$text-preset-3);
+  }
+}

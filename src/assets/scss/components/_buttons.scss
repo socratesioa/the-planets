@@ -1,0 +1,182 @@
+@use "../abstracts" as *;
+@use "../base/typography" as typo;
+
+.hamburger {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  @include respond(medium, min) {
+    display: none;
+  }
+}
+
+.hamburger:focus-visible {
+  outline-offset: 4px;
+  outline: 2px solid $clr-body-text-primary;
+}
+
+.hamburger img {
+  width: 24px;
+  height: 17px;
+}
+
+.planet__tabs-buttons {
+  @include respond(medium, min) {
+    counter-reset: btn-counter;
+  }
+}
+
+.planet__tabs-buttons button {
+  background: none;
+  outline: none;
+  border: none;
+  color: rgba($clr-body-text-primary, 0.5);
+  @include text-preset(typo.$text-preset-11);
+  text-transform: uppercase;
+  padding-bottom: 6px;
+  position: relative;
+  cursor: pointer;
+  @include respond(medium, min) {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    padding: 8px 20px;
+    border: 1px solid rgba($clr-body-text-primary, 0.2);
+    color: $clr-body-text-primary;
+  }
+  @include respond(large, min) {
+    @include text-preset(typo.$text-preset-9-bold);
+  }
+}
+
+.planet__tabs-buttons button:hover {
+  @include respond(medium, min) {
+    background: hsla(0, 0%, 85%, 0.2);
+  }
+}
+
+.planet__tabs-buttons button:focus-visible {
+  outline-offset: 4px;
+  outline: 2px solid $clr-body-text-primary;
+}
+
+.planet__tabs-buttons--mercury button.active {
+  @include respond(medium, min) {
+    background: $clr-mercury;
+    border: 1px solid $clr-mercury;
+  }
+}
+
+.planet__tabs-buttons--venus button.active {
+  @include respond(medium, min) {
+    background: $clr-venus;
+    border: 1px solid $clr-venus;
+  }
+}
+
+.planet__tabs-buttons--earth button.active {
+  @include respond(medium, min) {
+    background: $clr-earth;
+    border: 1px solid $clr-earth;
+  }
+}
+
+.planet__tabs-buttons--mars button.active {
+  @include respond(medium, min) {
+    background: $clr-mars;
+    border: 1px solid $clr-mars;
+  }
+}
+
+.planet__tabs-buttons--jupiter button.active {
+  @include respond(medium, min) {
+    background: $clr-jupiter;
+    border: 1px solid $clr-jupiter;
+  }
+}
+
+.planet__tabs-buttons--saturn button.active {
+  @include respond(medium, min) {
+    background: $clr-saturn;
+    border: 1px solid $clr-saturn;
+  }
+}
+
+.planet__tabs-buttons--uranus button.active {
+  @include respond(medium, min) {
+    background: $clr-uranus;
+    border: 1px solid $clr-uranus;
+  }
+}
+
+.planet__tabs-buttons--neptune button.active {
+  @include respond(medium, min) {
+    background: $clr-neptune;
+    border: 1px solid $clr-neptune;
+  }
+}
+
+.planet__tabs-buttons button::before {
+  @include respond(medium, min) {
+    counter-increment: btn-counter;
+    content: counter(btn-counter, decimal-leading-zero);
+    margin-right: 16px;
+    color: rgba($clr-body-text-primary, 0.5);
+  }
+}
+
+.planet__tabs-buttons button.active {
+  color: $clr-body-text-primary;
+}
+
+.planet__tabs-buttons button.active::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  left: 0;
+  bottom: 0;
+  @include respond(medium, min) {
+    display: none;
+  }
+}
+
+.planet__tabs-buttons--mercury button.active::after {
+  background: $clr-mercury;
+}
+
+.planet__tabs-buttons--venus button.active::after {
+  background: $clr-venus;
+}
+
+.planet__tabs-buttons--earth button.active::after {
+  background: $clr-earth;
+}
+
+.planet__tabs-buttons--mars button.active::after {
+  background: $clr-mars;
+}
+
+.planet__tabs-buttons--jupiter button.active::after {
+  background: $clr-jupiter;
+}
+
+.planet__tabs-buttons--saturn button.active::after {
+  background: $clr-saturn;
+}
+
+.planet__tabs-buttons--uranus button.active::after {
+  background: $clr-uranus;
+}
+
+.planet__tabs-buttons--neptune button.active::after {
+  background: $clr-neptune;
+}

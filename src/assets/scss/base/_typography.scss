@@ -1,0 +1,150 @@
+@use "../abstracts" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=League+Spartan:wght@100..900&display=swap");
+
+$font-body: "League Spartan", sans-serif;
+$font-heading: "Antonio", sans-serif;
+
+$text-preset-1: (
+  family: $font-heading,
+  size: 5rem,
+  lineHeight: 1.3,
+  letterSpacing: 0,
+  weight: 400,
+);
+
+$text-preset-2: (
+  family: $font-heading,
+  size: 3rem,
+  lineHeight: 1.3,
+  letterSpacing: 0,
+  weight: 400,
+);
+
+$text-preset-3: (
+  family: $font-heading,
+  size: 2.5rem,
+  lineHeight: 1.3,
+  letterSpacing: -0.0375em,
+  weight: 400,
+);
+
+$text-preset-4: (
+  family: $font-heading,
+  size: 1.75rem,
+  lineHeight: 1.3,
+  letterSpacing: -0.0357em,
+  weight: 400,
+);
+
+$text-preset-5: (
+  family: $font-heading,
+  size: 1.5rem,
+  lineHeight: 1.3,
+  letterSpacing: -0.0416em,
+  weight: 400,
+);
+
+$text-preset-6: (
+  family: $font-heading,
+  size: 1.25rem,
+  lineHeight: 1.3,
+  letterSpacing: -0.0375em,
+  weight: 400,
+);
+
+$text-preset-7: (
+  family: $font-body,
+  size: 0.9375rem,
+  lineHeight: 1.65,
+  letterSpacing: 0.09em,
+  weight: 700,
+);
+
+$text-preset-8-bold: (
+  family: $font-body,
+  size: 0.875rem,
+  lineHeight: 1.8,
+  letterSpacing: 0,
+  weight: 700,
+);
+
+$text-preset-8-regular: (
+  family: $font-body,
+  size: 0.875rem,
+  lineHeight: 1.8,
+  letterSpacing: 0,
+  weight: 400,
+);
+
+$text-preset-9-bold: (
+  family: $font-body,
+  size: 0.75rem,
+  lineHeight: 2.1,
+  letterSpacing: 0.2083em,
+  weight: 700,
+);
+
+$text-preset-9-regular: (
+  family: $font-body,
+  size: 0.75rem,
+  lineHeight: 2.1,
+  letterSpacing: 0,
+  weight: 400,
+);
+
+$text-preset-10-bold: (
+  family: $font-body,
+  size: 0.6875rem,
+  lineHeight: 2.25,
+  letterSpacing: 0.0909em,
+  weight: 700,
+);
+
+$text-preset-10-regular: (
+  family: $font-body,
+  size: 0.6875rem,
+  lineHeight: 2,
+  letterSpacing: 0,
+  weight: 400,
+);
+
+$text-preset-11: (
+  family: $font-body,
+  size: 0.5625rem,
+  lineHeight: 2.75,
+  letterSpacing: 0.2222em,
+  weight: 700,
+);
+
+$text-preset-12: (
+  family: $font-body,
+  size: 0.5rem,
+  lineHeight: 2,
+  letterSpacing: 0.09375em,
+  weight: 700,
+);
+
+.header__logo {
+  @include text-preset($text-preset-4);
+  text-transform: uppercase;
+}
+
+h1 {
+  @include text-preset($text-preset-3);
+  text-transform: uppercase;
+  text-align: center;
+  @include respond(medium, min) {
+    @include text-preset($text-preset-2);
+    text-align: left;
+  }
+  @include respond(large, min) {
+    @include text-preset($text-preset-1);
+  }
+}
+
+h2 {
+  @include text-preset($text-preset-12);
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.5);
+}
